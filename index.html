@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Playlist</title>
+</head>
+<body>
+
+<section id="selection">
+    <div id="playlist">
+
+        <div id="new_playlist">
+            <label for="playlist_name">Nom de la playlist :</label>
+            <input id="playlist_name" type="text">
+
+            <label for="playlist_genre">Genre de la playlist :</label>
+            <input id="playlist_genre" type="text">
+
+            <input type="submit" value="Créer">
+        </div>
+
+    </div>
+</section>
+
+<section id="playlist_section">
+    <div id="new_song">
+        <label for="song_title">Titre :</label>
+        <input id="song_title" type="text">
+
+        <label for="song_url">Url :</label>
+        <input id="song_url" type="text">
+
+        <input type="submit" value="Ajouter">
+    </div>
+
+    <h2></h2>
+
+    <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/js/Playlist.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
