@@ -7,6 +7,9 @@
     <title>Playlist</title>
 </head>
 <body>
+<section id="player">
+    <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
 
 <section id="selection">
     <div id="playlist">
@@ -20,11 +23,10 @@
 
             <input type="submit" value="Créer">
         </div>
-
     </div>
 </section>
 
-<section id="playlist_section">
+<section id="song_section">
     <div id="new_song">
         <label for="song_title">Titre :</label>
         <input id="song_title" type="text">
@@ -32,13 +34,13 @@
         <label for="song_url">Url :</label>
         <input id="song_url" type="text">
 
+        <select name="test" id="playlist_select"></select>
+
         <input type="submit" value="Ajouter">
     </div>
-
-    <h2></h2>
-
-    <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
+
+<section id="playlist_section"></section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="/js/Playlist.js"></script>

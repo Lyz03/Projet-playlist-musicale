@@ -1,16 +1,32 @@
-const Playlist = function (title, h2, container, videoPlayer) {
+const Playlist = function (title, videoPlayer, select, section) {
     this.title = title;
-    this.h2 = h2;
-    this.container = container;
+    this.section = section
+    this.select = select
     this.videoPlayer = videoPlayer;
 
-    // show the playlist name and songs
+    // show the playlist name and add an option to the select
     this.printPlaylist = function () {
-        this.h2.innerText = this.title;
-        this.container.appendChild(this.h2)
+        let container = document.createElement('div');
+        container.id = this.title;
+        this.section.appendChild(container);
+
+        let h2 = document.createElement('h2');
+        h2.innerText = this.title;
+        container.appendChild(h2);
+
+        let option = document.createElement('option');
+        option.value = this.title;
+        option.innerText = this.title;
+        this.select.appendChild(option);
     }
 
+    /*
     this.printSongs = function (inputTitle, inputSRC) {
         let span = document.createElement('span');
+        span.innerText = inputTitle;
+        span.setAttribute('data-url', inputSRC);
+        this.container.appendChild("span");
     }
+
+     */
 }
