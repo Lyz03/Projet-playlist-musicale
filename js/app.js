@@ -3,9 +3,10 @@ let songs = [
     ["titre 2", "https://www.youtube.com/embed/7DPSsBrkeQw"]
 ]
 
+const videoPlayer = document.querySelector('iframe');
+
 // playlist
 const playlistName = document.querySelector('#playlist_name');
-const videoPlayer = document.querySelector('iframe');
 const playlistSelect = document.querySelector("#playlist_select");
 const playlistSection = document.querySelector('#playlist_section');
 
@@ -13,7 +14,16 @@ const playlistSection = document.querySelector('#playlist_section');
 const songsTitle = document.querySelector('#song_title');
 const songsUrl = document.querySelector('#song_url');
 
+// new playlist
 document.querySelector('#playlist input[type=submit]').addEventListener("click", function () {
-    let playlist = new Playlist(playlistName.value, videoPlayer, playlistSelect, playlistSection);
+    let playlist = new Playlist(playlistName.value, playlistSelect, playlistSection);
     playlist.printPlaylist()
+})
+
+// new song
+document.querySelector("#song_section input[type=submit]").addEventListener("click", function () {
+    let container = document.getElementById(playlistSelect.value);
+    console.log(container)
+    let song = new Song(songsTitle.value, songsUrl.value, container, videoPlayer);
+    song.printSongs();
 })

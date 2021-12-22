@@ -1,8 +1,7 @@
-const Playlist = function (title, videoPlayer, select, section) {
+const Playlist = function (title, select, section) {
     this.title = title;
     this.section = section
     this.select = select
-    this.videoPlayer = videoPlayer;
 
     // show the playlist name and add an option to the select
     this.printPlaylist = function () {
@@ -19,14 +18,4 @@ const Playlist = function (title, videoPlayer, select, section) {
         option.innerText = this.title;
         this.select.appendChild(option);
     }
-
-    /*
-    this.printSongs = function (inputTitle, inputSRC) {
-        let span = document.createElement('span');
-        span.innerText = inputTitle;
-        span.setAttribute('data-url', inputSRC);
-        this.container.appendChild("span");
-    }
-
-     */
 }
