@@ -1,8 +1,3 @@
-let songsTest = [
-    ["titre", "https://www.youtube.com/embed/U-A-W6ln7u0"],
-    ["titre 2", "https://www.youtube.com/embed/7DPSsBrkeQw"]
-]
-
 const videoPlayer = document.querySelector('iframe');
 const playlistSelection = document.querySelector('#selection');
 const songSection = document.querySelector('#song_section')
