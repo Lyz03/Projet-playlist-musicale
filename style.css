@@ -9,3 +9,11 @@ iframe {
 #playlist_section span {
     display: block;
 }
+
+#selection {
+    display: none;
+}
+
+#song_section {
+    display: none;
+}

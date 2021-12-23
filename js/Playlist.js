@@ -1,7 +1,8 @@
-const Playlist = function (title, select, section) {
+const Playlist = function (title, select, section, genre) {
     this.title = title;
-    this.section = section
-    this.select = select
+    this.section = section;
+    this.select = select;
+    this.genre = genre;
 
     // show the playlist name and add an option to the select
     this.printPlaylist = function () {
@@ -12,6 +13,10 @@ const Playlist = function (title, select, section) {
         let h2 = document.createElement('h2');
         h2.innerText = this.title;
         container.appendChild(h2);
+
+        let p = document.createElement('p');
+        p.innerText = genre;
+        container.appendChild(p);
 
         let option = document.createElement('option');
         option.value = this.title;
