@@ -15,7 +15,7 @@ const Playlist = function (title, select, section, genre) {
         container.appendChild(h2);
 
         let p = document.createElement('p');
-        p.innerText = genre;
+        p.innerText = this.genre;
         container.appendChild(p);
 
         let option = document.createElement('option');
